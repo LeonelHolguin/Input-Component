@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://input-component-pink.vercel.app/">
       Solution
     </a>
     <span> | </span>
@@ -37,22 +37,20 @@
 
 ## Overview
 
-![screenshot](https://raw.githubusercontent.com/LeonelHolguin/Input-Component/main/img-project.png)
+![screenshot](https://raw.githubusercontent.com/LeonelHolguin/Input-Component/main/imgProject.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- Where can I see your demo? In vercel, it's the link: https://input-component-pink.vercel.app/
+- What was your experience? very good, I feel so happy while I'm doing this project, sometimes I got to feel like stressed but I is normal.
+- What have you learned/improved? basically this topic, before this project I don't know anything of web component and I had to do a lot of reseach, also I learned more of js vanilla because I do this project without ReactJs or another framework of Js.
+- Your wisdom? Js > all languaje programming.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [JavaScript](https://javascript.info/)
 
 ## Features
 
