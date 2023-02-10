@@ -8,14 +8,36 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Poppins&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Montserrat&family=Poppins&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/main.js" type="module" defer></script>
 </head>
 <body>
     <!-- Icons variant: phone, lock, vpn_key, visibility and favorite. 
     ONLY 5 WORDS CAN BE USED FOR ICONS.-->
-    <my-input startIcon="phone"></my-input>
-    <my-input endIcon="lock"></my-input>
+    <header class="tittle-page">
+        <h1>Inputs</h1>
+    </header>
+
+    <main class="contents">
+        <section class="normal-input">
+            <article class="input">
+                <h2>< input /></h2>
+                <my-input error class="focus"></my-input>
+            </article>
+        </section>
+    </main>
+
+    <footer class="credits">
+        <p>created by 
+            <a href="https://devchallenges.io/portfolio/LeonelHolguin" target="_blank" rel="noopener noreferrer">
+            <strong><u>LeonelHolguin</u></strong>
+            </a>
+             - 
+            <a href="https://devchallenges.io/" rel="noopener noreferrer">
+            devChallenges.io
+            </a>
+        </p>
+    </footer>
 </body>
 </html>

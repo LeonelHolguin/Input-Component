@@ -1,0 +1,27 @@
+html {
+    margin-top: 30px;
+    margin-left: 82px;
+}
+
+
+
+.credits {
+    display: flex;
+    justify-content: left;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    color: #A9A9A9;
+    margin-top: 5rem;
+}
+
+.credits a {
+    text-decoration: none;
+    color: #A9A9A9;
+}
+
+.credits a:hover {
+    color: aquamarine;
+}

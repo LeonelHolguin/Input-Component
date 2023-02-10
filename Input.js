@@ -37,6 +37,7 @@ export class Input extends HTMLElement {
         this.setName();
         this.setPlaceholder();
         this.setErrorState();
+        this.setPermaHoverAndFocus();
         this.setDisabled();
         this.setHelperText();
         this.setStartIcon();
@@ -64,6 +65,26 @@ export class Input extends HTMLElement {
 
         this.inputElement.setAttribute("class", "inputError");
         this.labelElement.setAttribute("class", "labelError");
+    }
+
+    setPermaHoverAndFocus() {
+        if(!this.hasAttribute("class")) return;
+
+        if(this.getAttribute("class") === "hover") {
+            this.inputElement.style.borderColor = "#333333";
+            this.labelElement.style.color = "#333333";
+
+        } else if(this.getAttribute("class") === "focus") {
+            if(this.hasAttribute("error")) {
+                this.inputElement.style.borderColor = "#D32F2F";
+                this.labelElement.style.color = "#D32F2F";
+
+            } else {
+                this.inputElement.style.borderColor = "#2962FF";
+                this.labelElement.style.color = "#2962FF";
+            }
+
+        } else return;
     }
 
     setDisabled() {
