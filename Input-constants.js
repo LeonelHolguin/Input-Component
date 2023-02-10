@@ -15,6 +15,7 @@ export const inputCSS = `
     font-weight: normal;
     font-style: normal;
     font-size: 24px;
+    color: #828282;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -64,17 +65,25 @@ export const inputCSS = `
     width: 200px;
     height: 56px;
     box-sizing: border-box;
+    padding-left: 12px
   }
   
-  :host(:focus-within) label{
+  :host(:focus-within) label, 
+  :host(:focus-within) .startIcon,
+  :host(:focus-within) .endIcon{
     color: #2962FF;
   }
 
-  :host(:focus-within) input {
+  :host(:focus-within) input,
+  :host(:focus-within) textarea {
     border-color: #2962FF;
   }
 
-  label:hover, label:active, input:hover+label, input:active+label, input:hover {
+  label:hover, 
+  label:active, 
+  input:hover+label, 
+  input:active+label, 
+  input:hover {
     color: #333333;
     border-color: #333333;
   }
@@ -87,12 +96,56 @@ export const inputCSS = `
     border-color: #D32F2F;
   }
 
-  :host(:focus-within) .labelError, .pError {
+  :host(:focus-within) .labelError, 
+  .pError {
     color: #D32F2F;
   }
   
   :host(:focus-within) .inputError {
     border-color: #D32F2F;
   }
-  
+
+  textarea {
+    resize: none;
+    display: none;
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+    border: 1px solid #828282;
+    border-radius: 8px;
+    width: 200px;
+    box-sizing: border-box;
+  }
+
+  span {
+    display: block;
+  }
+
+  .startIconInput {
+    padding-left: 45px;
+  }
+
+  .startIcon {
+    position: relative;
+    top: 61px;
+    left: 12px;
+  }
+
+  .endIcon {
+    position: relative;
+    top: 61px;
+    left: 167px;
+  }
+
 `
+
+export const icons = {
+  phone: 'phone',
+  lock: 'lock',
+  vpn_key: 'vpn_key',
+  visibility: 'visibility',
+  favorite: 'favorite'
+}

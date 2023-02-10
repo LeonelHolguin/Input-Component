@@ -1,4 +1,4 @@
-import { inputCSS } from "./input-constants.js";
+import { inputCSS, icons } from "./input-constants.js";
 
 export class Input extends HTMLElement {
     constructor() {
@@ -7,13 +7,9 @@ export class Input extends HTMLElement {
         this.shadowDOM = this.attachShadow({mode: "open"});
 
         this.inputElement = document.createElement("input");
-        this.shadowDOM.appendChild(this.inputElement);
-        
         this.labelElement = document.createElement("label");
-        this.shadowDOM.appendChild(this.labelElement);
-
         this.pElement = document.createElement("p");
-        this.shadowDOM.appendChild(this.pElement);
+        this.spanElement = document.createElement("span");
 
         this.sectionElement = document.createElement("section");
         this.shadowDOM.appendChild(this.sectionElement);
@@ -21,6 +17,10 @@ export class Input extends HTMLElement {
         this.sectionElement.appendChild(this.pElement);
         this.sectionElement.appendChild(this.inputElement);
         this.sectionElement.appendChild(this.labelElement);
+        this.sectionElement.appendChild(this.spanElement);
+        
+        this.textareaElement = document.createElement("textarea");
+        this.shadowDOM.appendChild(this.textareaElement);
     }
 
     connectedCallback() {
@@ -39,6 +39,12 @@ export class Input extends HTMLElement {
         this.setErrorState();
         this.setDisabled();
         this.setHelperText();
+        this.setStartIcon();
+        this.setEndIcon();
+        this.setInitialText();
+        this.setSize();
+        this.setFullWidth();
+        this.setMultiline();
     }
 
     setName(){
@@ -61,7 +67,7 @@ export class Input extends HTMLElement {
     }
 
     setDisabled() {
-        if(!this.hasAttribute("disabled")) return
+        if(!this.hasAttribute("disabled")) return;
 
         this.inputElement.disabled = true;
         this.inputElement.style.borderColor = "#E0E0E0";
@@ -79,6 +85,69 @@ export class Input extends HTMLElement {
         if(!this.hasAttribute("error")) return;
 
         this.pElement.setAttribute("class", "pError");
+    }
+
+    setStartIcon() {
+        if(!this.getAttribute("startIcon")) return;
+
+        let iconName = this.getAttribute("startIcon");
+        if(!icons[iconName]) return;
+
+        this.spanElement.style.display = "block";
+        this.spanElement.setAttribute("class", "material-icons startIcon");
+        this.inputElement.setAttribute("class", "startIconInput");
+        this.spanElement.appendChild(document.createTextNode(iconName));
+
+    }
+
+    setEndIcon() {
+        if(!this.getAttribute("endIcon")) return;
+
+        let iconName = this.getAttribute("endIcon");
+        if(!icons[iconName]) return;
+
+        this.spanElement.style.display = "block";
+        this.spanElement.setAttribute("class", "material-icons endIcon");
+        this.inputElement.setAttribute("class", "endIconInput");
+        this.spanElement.appendChild(document.createTextNode(iconName));
+    }
+
+    setInitialText() {
+        if(!this.hasAttribute("text")) return;
+
+        let textValue = this.getAttribute("text") || "Empty";
+        this.inputElement.value = textValue;
+
+    }
+
+    setSize() {
+        if(!this.hasAttribute("size")) return;
+
+        if(this.getAttribute("size") !== "sm") return;
+
+        this.inputElement.style.height = "40px";
+    }
+
+    setFullWidth() {
+        if(!this.hasAttribute("fullWidth")) return;
+
+        this.inputElement.style.width = "100%";
+    }
+
+    setMultiline() {
+        if(!this.hasAttribute("multiline")) return;
+        if(!this.getAttribute("row")) return;
+
+
+        let row = this.getAttribute("row");
+
+        this.inputElement.style.display = "none";
+        this.textareaElement.style.display = "block";
+
+        this.textareaElement.placeholder = this.inputElement.placeholder;
+        this.textareaElement.name = this.inputElement.id;
+
+        this.textareaElement.rows = row;
     }
 
 }
