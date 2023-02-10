@@ -118,6 +118,8 @@ export const inputCSS = `
     border-radius: 8px;
     width: 200px;
     box-sizing: border-box;
+    padding-top: 18px;
+    padding-left: 12px;
   }
 
   span {
