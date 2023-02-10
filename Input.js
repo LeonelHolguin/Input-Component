@@ -1,4 +1,4 @@
-import { inputCSS, icons } from "./input-constants.js";
+import { inputCSS, icons } from "./Input-constants.js";
 
 export class Input extends HTMLElement {
     constructor() {
