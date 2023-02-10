@@ -3,7 +3,95 @@ html {
     margin-left: 82px;
 }
 
+.tittle-page {
+    margin-bottom: 65px;
+}
 
+.tittle-page h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #4F4F4F;
+}
+
+.contents h2,
+.contents h3 {
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.contents h3 {
+    color: #828282;
+}
+
+.contents .normal-input {
+    display: flex;
+    gap: 70px;
+    margin-bottom: 52px;
+}
+
+.contents .normal-input .permaHover,
+.contents .normal-input .permaFocus {
+    margin-top: -5px;
+}
+
+.contents .error-input {
+    display: flex;
+    gap: 70px;
+    margin-bottom: 52px;
+}
+
+.contents .error-input .permaHover,
+.contents .error-input .permaFocus {
+    margin-top: -1px;
+}
+
+.contents .disabled-input {
+    margin-bottom: 52px;
+}
+
+.contents .helpertext-input {
+    display: flex;
+    gap: 156px;
+    margin-bottom: 52px;
+}
+
+.contents .icons-input {
+    display: flex;
+    gap: 156px;
+    margin-bottom: 52px;
+}
+
+.contents .icons-input my-input {
+    position: relative;
+    top: -25px;
+}
+
+.contents .value-input {
+    margin-bottom: 52px;
+}
+
+.contents .size-input {
+    display: flex;
+    gap: 156px;
+    margin-bottom: 52px;
+}
+
+.contents .fullWidth-input {
+    width: 95%;
+    margin-bottom: 52px;
+}
+
+.contents .multiline-input {
+    margin-bottom: 22px;
+}
 
 .credits {
     display: flex;
@@ -14,7 +102,6 @@ html {
     font-size: 0.875rem;
     line-height: 1.063rem;
     color: #A9A9A9;
-    margin-top: 5rem;
 }
 
 .credits a {

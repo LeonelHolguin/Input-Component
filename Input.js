@@ -134,9 +134,9 @@ export class Input extends HTMLElement {
     }
 
     setInitialText() {
-        if(!this.hasAttribute("text")) return;
+        if(!this.hasAttribute("value")) return;
 
-        let textValue = this.getAttribute("text") || "Empty";
+        let textValue = this.getAttribute("value") || "Empty";
         this.inputElement.value = textValue;
 
     }

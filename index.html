@@ -22,9 +22,92 @@
     <main class="contents">
         <section class="normal-input">
             <article class="input">
-                <h2>< input /></h2>
+                <h2>< Input /></h2>
+                <my-input></my-input>
+            </article>
+
+            <article class="permaHover">
+                <h3>&:hover</h3>
+                <my-input class="hover"></my-input>
+            </article>
+
+            <article class="permaFocus">
+                <h3>&:focus</h3>
+                <my-input class="focus"></my-input>
+            </article>
+        </section>
+
+        <section class="error-input">
+            <article class="input">
+                <h2>< Input error /></h2>
+                <my-input error></my-input>
+            </article>
+
+            <article class="permaHover">
+                <h3>&:hover</h3>
+                <my-input error class="hover"></my-input>
+            </article>
+
+            <article class="permaFocus">
+                <h3>&:focus</h3>
                 <my-input error class="focus"></my-input>
             </article>
+        </section>
+
+        <section class="disabled-input">
+            <h2>< Input disabled /></h2>
+            <my-input disabled></my-input>
+        </section>
+
+        <section class="helpertext-input">
+            <article class="input">
+                <h2>< Input helperText="Some interesting text" /></h2>
+                <my-input helperText="Some interesting text"></my-input>
+            </article>
+
+            <article class="error">
+                <h2>< Input helperText="Some interesting text" error /></h2>
+                <my-input helperText="Some interesting text" error></my-input>
+            </article>
+        </section>
+
+        <section class="icons-input">
+            <article class="start">
+                <h2>< Input startIcon /> </h2>
+                <my-input startIcon="phone"></my-input>
+            </article>
+
+            <article class="end">
+                <h2>< Input endIcon /></h2>
+                <my-input endIcon="lock"></my-input>
+            </article>
+        </section>
+
+        <section class="value-input">
+            <h2>< Input value="Text" /></h2>
+            <my-input value="Text"></my-input>
+        </section>
+
+        <section class="size-input">
+            <article class="sm">
+                <h2>< Input size="sm" /></h2>
+                <my-input size="sm"></my-input>
+            </article>
+
+            <article class="md">
+                <h2>< Input size="md" /></h2>
+                <my-input size="md"></my-input>
+            </article>
+        </section>
+
+        <section class="fullWidth-input">
+            <h2>< Input fullWidth /></h2>
+            <my-input fullWidth></my-input>
+        </section>
+
+        <section class="multiline-input">
+            <h2>< Input multiline row="4" /></h2>
+            <my-input multiline row="4"></my-input> 
         </section>
     </main>
 
